@@ -1,1 +1,6 @@
 .idea
+
+# Build pyinstaller
+installer_sc_sok.spec
+build/*
+dist/*
