@@ -1,0 +1,13 @@
+id,en,es_ES
+check_system,This script currently only works on Windows,Este script actualmente sólo funciona en Windows
+main_title,Star Citizen Language Installer,Instalador de idiomas Star Citizen
+bar_config_label,Config,Ajustes
+bar_translation_label,Language,Idioma
+en,English,Inglés
+es_ES,Spanish (Spain),Español (España)
+folder_select_button,Select folder,Seleccionar carpeta
+folder_path_no_selected,Select a folder with the button on the left,Selecciona una carpeta con el botón de la izquierda
+uninstall_button,Uninstall,Desinstalar
+install_button,Install,Instalar
+download_global,Error downloading global.ini:,Error al descargar global.ini:
+install_success,Installation Completed,Instalación completada

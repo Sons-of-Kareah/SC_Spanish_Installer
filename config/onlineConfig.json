@@ -1,0 +1,8 @@
+{
+  "languages": ["en", "es_ES"],
+  "user_cfg_lang": {
+    "en": "english",
+    "es_ES": "spanish_(spain)"
+  },
+  "versions": ["LIVE", "PTU", "EPTU", "HOTFIX", "TECH-PREVIEW"]
+}
