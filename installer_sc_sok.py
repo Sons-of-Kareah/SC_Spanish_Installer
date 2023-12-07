@@ -22,10 +22,8 @@ error_codes = {
 # - Global variables
 installer = {
     "lang": "es_ES",
-    "csv_url": "https://gist.githubusercontent.com/Autovot/c3553271592d1ddd162992bb0b626b3f/raw"
-               "/dfb894cfd55be398ab1ea2e2b6168edb8307c5bc/lang.csv",
-    "online_config_url": "https://gist.githubusercontent.com/Autovot/08a3f1ac003aa15d76658541f87f84c9/raw"
-                         "/63e14c653967346b875c8d3f8e89bc1a751b83c7/onlineConfig.json",
+    "csv_url": "https://raw.githubusercontent.com/Sons-of-Kareah/SC_Spanish_Installer/master/config/lang.csv",
+    "online_config_url": "https://raw.githubusercontent.com/Sons-of-Kareah/SC_Spanish_Installer/master/config/onlineConfig.json",
     "home": os.path.expanduser("~"),
     "url_ini": "https://github.com/Autovot/SC_Spanish_SOK/releases/latest/download/global.ini",  # + .{idioma}
 }
