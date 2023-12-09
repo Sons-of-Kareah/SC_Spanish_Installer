@@ -28,7 +28,7 @@ installer = {
     "url_ini": "https://github.com/Autovot/SC_Spanish_SOK/releases/latest/download/global.ini",  # + .{idioma}
 }
 game = {
-    'default_folder': 'C:/Program Files/Roberts Space Industries/StarCitizen/',
+    "default_folder": "C:/Program Files/Roberts Space Industries/StarCitizen/",
     # "default_folder": "C:/Games/Roberts Space Industries/StarCitizen/",
     "lang_fodler": "data/Localization/",
     "lang": "en",
@@ -78,10 +78,10 @@ def set_installer_config():
 def set_user_config(passed_lang_complete):
     # Check if user.cfg exist inside game version folder
     temp_cfg_path = (
-            entrys["game_folder"].get()
-            + entrys["selected_version"].get()
-            + "/"
-            + game["config_file"]
+        entrys["game_folder"].get()
+        + entrys["selected_version"].get()
+        + "/"
+        + game["config_file"]
     )
 
     config_user = configparser.ConfigParser()
@@ -101,6 +101,7 @@ def set_user_config(passed_lang_complete):
                 config_user["Global"] = {temp_line[0]: temp_line[1]}
 
     config_user["Global"] = {"g_language": passed_lang_complete}
+    config_user["Global"] = {"g_languageAudio": "english"}
     with open(temp_cfg_path, "w") as file:
         config_user.write(file)
 
@@ -111,11 +112,11 @@ def install_localization(passed_lang):
     #  del juego seleccionada, aparte se añade la vesion del .ini descargado
     temp_lang_complete = online_config["user_cfg_lang"][passed_lang]
     temp_ini_path = (
-            entrys["game_folder"].get()
-            + entrys["selected_version"].get()
-            + "/"
-            + game["lang_fodler"]
-            + temp_lang_complete
+        entrys["game_folder"].get()
+        + entrys["selected_version"].get()
+        + "/"
+        + game["lang_fodler"]
+        + temp_lang_complete
     )
     temp_url_ini = installer["url_ini"] + "." + passed_lang
 
@@ -133,9 +134,7 @@ def install_localization(passed_lang):
             temp_url_ini, os.path.join(temp_ini_path, "global.ini")
         )
     except urllib.error.URLError as urlError:
-        tk.messagebox.showerror(
-            "Error", f"Error: {error_codes[4]} - {urlError.reason}"
-        )
+        tk.messagebox.showerror("Error", f"Error: {error_codes[4]} - {urlError.reason}")
         exit(4)
 
     # Set user.cfg
