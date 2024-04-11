@@ -23,7 +23,8 @@ error_codes = {
 installer = {
     "lang": "es_ES",
     "csv_url": "https://raw.githubusercontent.com/Sons-of-Kareah/SC_Spanish_Installer/master/config/lang.csv",
-    "online_config_url": "https://raw.githubusercontent.com/Sons-of-Kareah/SC_Spanish_Installer/master/config/onlineConfig.json",
+    "online_config_url":
+        "https://raw.githubusercontent.com/Sons-of-Kareah/SC_Spanish_Installer/master/config/onlineConfig.json",
     "home": os.path.expanduser("~"),
     "url_ini": "https://github.com/Autovot/SC_Spanish_SOK/releases/latest/download/global.ini",  # + .{idioma}
 }
@@ -221,6 +222,9 @@ folder_path_label.grid(row=0, column=1, pady=10)
 # - GUI - (1 , 0) - Version - Dropdown
 # TODO: desactivar el dropdown si no hay carpeta seleccionada y motrar un mensaje
 # TODO: si se selecciona ingles, se desactiva la traduccion
+# Initialize the versions_available list with a placeholder
+entrys["versions_available"] = ["Loading..."]
+
 version_dropdown = tk.OptionMenu(
     main_window, entrys["selected_version"], *entrys["versions_available"]
 )
